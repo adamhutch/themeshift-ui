@@ -38,8 +38,7 @@ jobs:
       - name: Build component package
         run: npm run build:components
 
-      - name: Upload coverage to Codecov
+      - name: Upload coverage reports to Codecov
         uses: codecov/codecov-action@v5
         with:
-          files: ./coverage/lcov.info
-          use_oidc: true
+          token: ${{ secrets.CODECOV_TOKEN }}
