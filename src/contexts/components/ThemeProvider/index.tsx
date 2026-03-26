@@ -1,15 +1,8 @@
-import { createContext, useEffect, useMemo, useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 
 import { getSystemTheme } from '../../helpers/getSystemTheme';
 import type { ThemeMode } from '../../types';
-
-type ThemeContextValue = {
-  theme: ThemeMode;
-  setTheme: (mode: ThemeMode) => void;
-  toggleTheme: () => void;
-};
-
-export const ThemeContext = createContext<ThemeContextValue | null>(null);
+import { ThemeContext } from './ThemeContext';
 
 type ThemeProviderProps = {
   children: React.ReactNode;

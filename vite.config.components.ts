@@ -1,13 +1,15 @@
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { defineConfig } from 'vite';
+import type { Plugin } from 'vite';
 import react from '@vitejs/plugin-react';
 import { themeShift } from '@themeshift/vite-plugin-themeshift';
+import type { OutputAsset, OutputBundle, OutputChunk } from 'rollup';
 
-function injectComponentCss() {
+function injectComponentCss(): Plugin {
   return {
     name: 'inject-component-css',
-    generateBundle(_options: unknown, bundle: Record<string, any>) {
+    generateBundle(_options: unknown, bundle: OutputBundle) {
       const cssAssetsToRemove = new Set<string>();
 
       for (const chunk of Object.values(bundle)) {
@@ -28,7 +30,7 @@ function injectComponentCss() {
         const cssParts: string[] = [];
 
         for (const cssFileName of importedCss) {
-          const asset = bundle[cssFileName];
+          const asset = bundle[cssFileName] as OutputAsset | OutputChunk | undefined;
 
           if (!asset || asset.type !== 'asset') {
             continue;
