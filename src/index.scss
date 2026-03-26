@@ -1,0 +1,10 @@
+:root {
+  color-scheme: dark light;
+  color: token('theme.text.base');
+  background-color: token('theme.surface.base');
+
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  font-weight: 400;
+}

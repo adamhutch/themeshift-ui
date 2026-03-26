@@ -1,0 +1,20 @@
+@mixin focusRing(
+  $ringColor: var(--accessibility-focus-ring),
+  $gapColor: var(--accessibility-focus-gap),
+  $ringWidth: var(--accessibility-focus-ring-width),
+  $gapWidth: var(--accessibility-focus-gap-width)
+) {
+  box-shadow:
+    0 0 0 #{$gapWidth} #{$gapColor},
+    0 0 0 calc(#{$gapWidth} + #{$ringWidth}) #{$ringColor};
+}
+
+@mixin buttonFocus(
+  $ringColor: var(--accessibility-focus-ring),
+  $gapColor: var(--accessibility-focus-gap),
+  $ringWidth: var(--accessibility-focus-ring-width),
+  $gapWidth: var(--accessibility-focus-gap-width)
+) {
+  outline: none;
+  @include focusRing($ringColor, $gapColor, $ringWidth, $gapWidth);
+}

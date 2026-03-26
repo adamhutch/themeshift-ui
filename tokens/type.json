@@ -1,0 +1,114 @@
+{
+  "font": {
+    "family": {
+      "$type": "fontFamily",
+      "sans": {
+        "$value": "'Noto Sans', 'Helvetica Neue', Arial, system-ui, sans-serif",
+        "$description": "Primary UI font"
+      },
+      "serif": {
+        "$value": "'Roboto Slab', Georgia, serif",
+        "$description": "Editorial / display font"
+      }
+    },
+    "size": {
+      "$type": "fontSize",
+      "xs": {
+        "$value": "0.75rem"
+      },
+      "s": {
+        "$value": "0.875rem"
+      },
+      "m": {
+        "$value": "1rem"
+      },
+      "l": {
+        "$value": "1.125rem"
+      },
+      "xl": {
+        "$value": "1.25rem"
+      },
+      "xxl": {
+        "$value": "1.5rem"
+      }
+    },
+    "weight": {
+      "$type": "fontWeight",
+      "light": {
+        "$value": "300"
+      },
+      "regular": {
+        "$value": "400"
+      },
+      "medium": {
+        "$value": "500"
+      },
+      "bold": {
+        "$value": "700"
+      }
+    }
+  },
+  "text": {
+    "size": {
+      "$type": "fontSize",
+      "caption": {
+        "$value": "{font.size.s}",
+        "$description": "Small supporting text"
+      },
+      "body": {
+        "$value": "{font.size.m}",
+        "$description": "Default body text"
+      },
+      "subtitle": {
+        "$value": "{font.size.l}",
+        "$description": "Secondary heading / section intro"
+      },
+      "title": {
+        "$value": "{font.size.xl}",
+        "$description": "Primary heading size"
+      }
+    },
+    "style": {
+      "caption": {
+        "$type": "typography",
+        "$value": {
+          "fontFamily": "{font.family.sans}",
+          "fontSize": "{font.size.s}",
+          "lineHeight": "1.4",
+          "fontWeight": "{font.weight.regular}"
+        },
+        "$description": "Caption and helper text"
+      },
+      "body": {
+        "$type": "typography",
+        "$value": {
+          "fontFamily": "{font.family.sans}",
+          "fontSize": "{font.size.m}",
+          "lineHeight": "1.6",
+          "fontWeight": "{font.weight.regular}"
+        },
+        "$description": "Default paragraph text"
+      },
+      "subtitle": {
+        "$type": "typography",
+        "$value": {
+          "fontFamily": "{font.family.sans}",
+          "fontSize": "{font.size.l}",
+          "lineHeight": "1.45",
+          "fontWeight": "{font.weight.medium}"
+        },
+        "$description": "Sub-title / section heading"
+      },
+      "title": {
+        "$type": "typography",
+        "$value": {
+          "fontFamily": "{font.family.display}",
+          "fontSize": "{font.size.xl}",
+          "lineHeight": "1.3",
+          "fontWeight": "{font.weight.regular}"
+        },
+        "$description": "Primary headings"
+      }
+    }
+  }
+}
