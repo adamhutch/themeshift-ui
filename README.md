@@ -98,11 +98,6 @@ ThemeShift UI currently includes:
 
 CSS variable names use the `--themeshift-*` namespace to avoid collisions with application-level custom properties.
 
-## Notes
-
-- The npm badge is still a placeholder until the package is published.
-- The component count badge reflects the current number of published components.
-
 ## License
 
 This project is licensed under the MIT License. See [LICENSE](./LICENSE).
