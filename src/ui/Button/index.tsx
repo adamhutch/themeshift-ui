@@ -6,14 +6,16 @@ export type ButtonSize = 'small' | 'medium' | 'large';
 export type ButtonIntent =
   | 'primary'
   | 'secondary'
+  | 'tertiary'
   | 'constructive'
   | 'destructive';
 
 export type ButtonProps = {
   children: React.ReactNode;
   className?: string;
-  size?: ButtonSize;
   intent?: ButtonIntent;
+  size?: ButtonSize;
+  visuallyDisabled?: boolean;
 } & React.ComponentPropsWithoutRef<'button'>;
 
 const sizeClassMap = {
@@ -25,6 +27,7 @@ const sizeClassMap = {
 const intentClassMap = {
   primary: styles.primary,
   secondary: styles.secondary,
+  tertiary: styles.tertiary,
   constructive: styles.constructive,
   destructive: styles.destructive,
 } satisfies Record<ButtonIntent, string>;
@@ -32,8 +35,9 @@ const intentClassMap = {
 export const Button = ({
   children,
   className,
-  size = 'medium',
   intent = 'primary',
+  size = 'medium',
+  visuallyDisabled = false,
   ...buttonProps
 }: ButtonProps) => (
   <button
@@ -42,6 +46,7 @@ export const Button = ({
       styles.container,
       sizeClassMap[size],
       intentClassMap[intent],
+      visuallyDisabled && styles.visuallyDisabled,
       className
     )}
   >

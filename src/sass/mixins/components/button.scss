@@ -10,3 +10,7 @@
   color: inherit;
   font: inherit;
 }
+
+@mixin disabled {
+  opacity: 0.6;
+}

@@ -1,0 +1,9 @@
+@use '../../tokens.runtime.scss' as *;
+
+.link {
+  color: token('components.link.text');
+}
+
+@mixin hover {
+  text-decoration: underline;
+}

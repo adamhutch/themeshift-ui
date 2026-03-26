@@ -3,7 +3,7 @@
     "family": {
       "$type": "fontFamily",
       "sans": {
-        "$value": "'Noto Sans', 'Helvetica Neue', Arial, system-ui, sans-serif",
+        "$value": "'Noto Sans Variable', 'Helvetica Neue', Arial, system-ui, sans-serif",
         "$description": "Primary UI font"
       },
       "serif": {

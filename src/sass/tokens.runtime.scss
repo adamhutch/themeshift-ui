@@ -17,5 +17,5 @@
 }
 
 @function token($path) {
-  @return var(#{_sd-to-css-var-name($path)});
+  @return var(--themeshift-#{string.slice(_sd-to-css-var-name($path), 3)});
 }

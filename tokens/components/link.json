@@ -1,0 +1,30 @@
+{
+  "components": {
+    "link": {
+      "padding": {
+        "$value": "0 {grid.padding.medium}"
+      },
+      "font": {
+        "$value": "{font.family.sans}"
+      }
+    },
+
+    "light": {
+      "text": {
+        "$value": "dodgerblue"
+      },
+      "surface": {
+        "$value": "transparent"
+      }
+    },
+
+    "dark": {
+      "text": {
+        "$value": "hotpink"
+      },
+      "surface": {
+        "$value": "transparent"
+      }
+    }
+  }
+}

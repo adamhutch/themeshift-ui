@@ -1,4 +1,5 @@
-@use '@/sass/mixins/button';
+@use '@/sass/mixins/components/button';
+@use '@/sass/mixins/components/link';
 @use '@/sass/mixins/accessibility';
 
 .container {
@@ -7,10 +8,7 @@
   padding: token('components.button.padding');
   border-radius: token('radius.small');
   font: bold token('font.size.md') token('components.button.font');
-  transition:
-    0.3s background,
-    0.3s color,
-    0.2s box-shadow;
+  white-space: nowrap;
 
   &:focus {
     outline: none;
@@ -23,19 +21,33 @@
   &:not(:last-child) {
     margin-right: 1rem;
   }
+
+  &:disabled {
+    @include button.disabled;
+
+    cursor: not-allowed;
+  }
+}
+
+// Utility classes
+.visuallyDisabled {
+  @include button.disabled;
 }
 
 // Button sizes
 .small {
   font-size: token('font.size.xs');
+  line-height: token('components.button.sizes.small');
 }
 
 .medium {
   font-size: token('font.size.m');
+  line-height: token('components.button.sizes.medium');
 }
 
 .large {
   font-size: token('font.size.l');
+  line-height: token('components.button.sizes.large');
 }
 
 // Button intents
@@ -43,22 +55,44 @@
   background: token('components.button.intents.primary.surface');
   color: token('components.button.intents.primary.fg');
 
-  &:hover {
+  &:not(:disabled):hover {
     background: token('components.button.intents.primary.hover');
   }
 }
 
 .secondary {
-  background: token('components.button.intents.secondary.base');
-  color: token('components.button.intents.secondary.base');
+  background: token('components.button.intents.secondary.surface');
+  color: token('components.button.intents.secondary.fg');
+
+  &:not(:disabled):hover {
+    background: token('components.button.intents.secondary.hover');
+  }
+}
+
+.tertiary {
+  background: token('components.link.surface');
+  color: token('components.link.text');
+
+  &:not(:disabled):hover,
+  &:not(:disabled):focus {
+    @include link.hover;
+  }
 }
 
 .constructive {
-  background: token('components.button.intents.constructive.base');
-  color: token('components.button.intents.constructive.base');
+  background: token('components.button.intents.constructive.surface');
+  color: token('components.button.intents.constructive.fg');
+
+  &:not(:disabled):hover {
+    background: token('components.button.intents.constructive.hover');
+  }
 }
 
 .destructive {
-  background: token('components.button.intents.destructive.base');
-  color: token('components.button.intents.destructive.base');
+  background: token('components.button.intents.destructive.surface');
+  color: token('components.button.intents.destructive.fg');
+
+  &:not(:disabled):hover {
+    background: token('components.button.intents.destructive.hover');
+  }
 }
