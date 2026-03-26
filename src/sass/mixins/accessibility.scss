@@ -1,8 +1,12 @@
+@use '@themeshift/vite-plugin-themeshift/token' as * with (
+  $var-prefix: 'themeshift'
+);
+
 @mixin focusRing(
-  $ringColor: var(--themeshift-accessibility-focus-ring),
-  $gapColor: var(--themeshift-accessibility-focus-gap),
-  $ringWidth: var(--themeshift-accessibility-focus-ring-width),
-  $gapWidth: var(--themeshift-accessibility-focus-gap-width)
+  $ringColor: token('accessibility.focus.ring'),
+  $gapColor: token('accessibility.focus.gap'),
+  $ringWidth: token('accessibility.focus.ringWidth'),
+  $gapWidth: token('accessibility.focus.gapWidth')
 ) {
   box-shadow:
     0 0 0 #{$gapWidth} #{$gapColor},
@@ -10,11 +14,12 @@
 }
 
 @mixin buttonFocus(
-  $ringColor: var(--themeshift-accessibility-focus-ring),
-  $gapColor: var(--themeshift-accessibility-focus-gap),
-  $ringWidth: var(--themeshift-accessibility-focus-ring-width),
-  $gapWidth: var(--themeshift-accessibility-focus-gap-width)
+  $ringColor: token('accessibility.focus.ring'),
+  $gapColor: token('accessibility.focus.gap'),
+  $ringWidth: token('accessibility.focus.ringWidth'),
+  $gapWidth: token('accessibility.focus.gapWidth')
 ) {
-  outline: none;
   @include focusRing($ringColor, $gapColor, $ringWidth, $gapWidth);
+
+  outline: none;
 }

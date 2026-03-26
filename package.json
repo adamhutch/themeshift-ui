@@ -28,11 +28,15 @@
     "dev": "vite",
     "build:app": "vite build",
     "build:components": "node scripts/build.mjs",
+    "make:component": "node scripts/maker/index.mjs component",
+    "make:icon": "node scripts/maker/index.mjs icon",
+    "make:tokens": "node scripts/maker/index.mjs tokens",
     "lint": "eslint .",
     "preview": "vite preview"
   },
   "dependencies": {
     "@fontsource-variable/noto-sans": "^5.2.10",
+    "@themeshift/vite-plugin-themeshift": "^0.3.3",
     "classnames": "^2.5.1"
   },
   "peerDependencies": {
@@ -41,7 +45,6 @@
   },
   "devDependencies": {
     "@eslint/js": "^9.39.4",
-    "@themeshift/vite-plugin-themeshift": "^0.3.0",
     "@types/node": "^24.12.0",
     "@types/react": "^19.2.14",
     "@types/react-dom": "^19.2.3",
@@ -51,6 +54,7 @@
     "eslint-plugin-react-refresh": "^0.5.2",
     "globals": "^17.4.0",
     "prettier": "3.8.1",
+    "prompts": "^2.4.2",
     "react": "^19.2.4",
     "react-dom": "^19.2.4",
     "sass": "^1.98.0",
