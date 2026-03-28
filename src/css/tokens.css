@@ -96,24 +96,48 @@
   --themeshift-text-style-subtitle: 500 1.125rem/1.45 'Noto Sans Variable', 'Helvetica Neue', Arial, system-ui, sans-serif;
 
   /* Accessibility */
+  --themeshift-accessibility-focus-gap: #ffffff;
   --themeshift-accessibility-focus-gap-width: 2px;
+  --themeshift-accessibility-focus-ring: #3f51b5;
   --themeshift-accessibility-focus-ring-width: 3px;
+
+  /* Theme */
+  --themeshift-theme-surface-base: #263238;
+  --themeshift-theme-surface-raised: #37474f;
+  --themeshift-theme-text-base: #ffffff;
 
   /* Components */
   --themeshift-components-button-font: 'Noto Sans Variable', 'Helvetica Neue', Arial, system-ui, sans-serif;
+  --themeshift-components-button-intents-constructive-fg: #000000;
+  --themeshift-components-button-intents-constructive-hover: #81c784;
+  --themeshift-components-button-intents-constructive-pressed: #4caf50;
+  --themeshift-components-button-intents-constructive-surface: #66bb6a;
+  --themeshift-components-button-intents-destructive-fg: #000000;
+  --themeshift-components-button-intents-destructive-hover: #e57373;
+  --themeshift-components-button-intents-destructive-pressed: #f44336;
+  --themeshift-components-button-intents-destructive-surface: #ef5350;
+  --themeshift-components-button-intents-primary-fg: #ffffff;
+  --themeshift-components-button-intents-primary-hover: #7986cb;
+  --themeshift-components-button-intents-primary-pressed: #3f51b5;
+  --themeshift-components-button-intents-primary-surface: #5c6bc0;
+  --themeshift-components-button-intents-secondary-fg: #000000;
+  --themeshift-components-button-intents-secondary-hover: #e0e0e0;
+  --themeshift-components-button-intents-secondary-pressed: #9e9e9e;
+  --themeshift-components-button-intents-secondary-surface: #bdbdbd;
   --themeshift-components-button-padding: 0 1rem;
   --themeshift-components-button-sizes-large: 48px;
   --themeshift-components-button-sizes-medium: 40px;
   --themeshift-components-button-sizes-small: 32px;
   --themeshift-components-link-font: 'Noto Sans Variable', 'Helvetica Neue', Arial, system-ui, sans-serif;
   --themeshift-components-link-padding: 0 1rem;
+  --themeshift-components-surface: transparent;
+  --themeshift-components-text: hotpink;
 
   /* Other */
   --themeshift-base: {color.blueGrey.fg};
   --themeshift-grid-padding-large: 2rem;
   --themeshift-grid-padding-medium: 1rem;
   --themeshift-grid-padding-small: .5rem;
-  --themeshift-milk: chocolate;
   --themeshift-radius-large: 2rem;
   --themeshift-radius-medium: 1rem;
   --themeshift-radius-small: .5rem;

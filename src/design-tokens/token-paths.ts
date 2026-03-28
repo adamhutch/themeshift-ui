@@ -136,7 +136,6 @@ export const tokenPaths = [
   "grid.padding.large",
   "grid.padding.medium",
   "grid.padding.small",
-  "milk",
   "radius.large",
   "radius.medium",
   "radius.small",
