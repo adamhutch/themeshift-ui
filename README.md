@@ -111,12 +111,48 @@ ThemeShift UI currently includes:
 - `@themeshift/ui/components/Button`
 - `@themeshift/ui/components/Heading`
 - `@themeshift/ui/components/Navbar`
+- `@themeshift/ui/components/Responsive`
 - `@themeshift/ui/css/base.css`
 - `@themeshift/ui/css/tokens.css`
 - `@themeshift/ui/theme-contract.json`
 - `@themeshift/ui/tokens/*`
 
 CSS variable names use the `--themeshift-*` namespace to avoid collisions with application-level custom properties.
+
+## Responsive
+
+ThemeShift UI includes a `Responsive` primitive for CSS-only conditional visibility.
+
+```tsx
+import { Responsive } from '@themeshift/ui/components/Responsive';
+
+export function ExampleResponsive() {
+  return (
+    <>
+      <Responsive when={{ below: 'tablet' }} data-testid="mobile-only">
+        Mobile only
+      </Responsive>
+
+      <Responsive when={{ from: 'tablet' }}>Tablet and up</Responsive>
+
+      <Responsive when={{ from: 'tablet', to: 'desktop' }}>
+        Tablet through desktop
+      </Responsive>
+
+      <Responsive when={{ below: 'desktop' }}>Below desktop</Responsive>
+    </>
+  );
+}
+```
+
+Breakpoint semantics:
+
+- `from` is inclusive
+- `to` is inclusive
+- `above` is exclusive
+- `below` is exclusive
+
+Breakpoint values are token-driven through `layout.breakpoints.*`.
 
 ## License
 

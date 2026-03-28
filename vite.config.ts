@@ -15,7 +15,13 @@ export default defineConfig({
     react(),
     themeShift({
       cssVarPrefix: 'themeshift',
-      platforms: ['css', 'meta'],
+      platforms: ['css', 'meta', 'scss'],
+      filters: {
+        scss: {
+          includePrefixes: ['radius-', 'spacing-', 'font-', 'text-', 'layout-'],
+          excludePrefixes: ['theme-', 'components-'],
+        },
+      },
       defaultTheme: 'dark',
     }),
   ],

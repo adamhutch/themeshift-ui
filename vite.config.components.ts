@@ -74,7 +74,13 @@ export default defineConfig({
     injectComponentCss(),
     themeShift({
       cssVarPrefix: 'themeshift',
-      platforms: ['css', 'meta'],
+      platforms: ['css', 'meta', 'scss'],
+      filters: {
+        scss: {
+          includePrefixes: ['radius-', 'spacing-', 'font-', 'text-', 'layout-'],
+          excludePrefixes: ['theme-', 'components-'],
+        },
+      },
       defaultTheme: 'dark',
     }),
   ],
@@ -92,6 +98,9 @@ export default defineConfig({
         ),
         'components/Navbar/index': fileURLToPath(
           new URL('./src/components/Navbar/index.ts', import.meta.url),
+        ),
+        'components/Responsive/index': fileURLToPath(
+          new URL('./src/components/Responsive/index.ts', import.meta.url),
         ),
         'contexts/index': fileURLToPath(new URL('./src/contexts/index.ts', import.meta.url)),
       },

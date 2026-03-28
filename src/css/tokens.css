@@ -145,6 +145,9 @@
   --themeshift-grid-padding-large: 2rem;
   --themeshift-grid-padding-medium: 1rem;
   --themeshift-grid-padding-small: .5rem;
+  --themeshift-layout-breakpoints-desktop: 1024px;
+  --themeshift-layout-breakpoints-mobile: 0px;
+  --themeshift-layout-breakpoints-tablet: 768px;
   --themeshift-layout-site-max-width: 1200px;
   --themeshift-radius-large: 2rem;
   --themeshift-radius-medium: 1rem;
