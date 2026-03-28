@@ -55,6 +55,25 @@ Each component loads its own CSS automatically. You only need to import:
 - `@themeshift/ui/css/base.css` for shared base styles
 - `@themeshift/ui/css/tokens.css` for the package's default token values
 
+For `light` and `dark` theme-specific token values to apply, set `data-theme` on the document root (`<html>`), not on your React app container:
+
+```tsx
+import { useEffect } from 'react';
+import { Button } from '@themeshift/ui/components/Button';
+import '@themeshift/ui/css/base.css';
+import '@themeshift/ui/css/tokens.css';
+
+export function Example() {
+  useEffect(() => {
+    document.documentElement.dataset.theme = 'dark';
+  }, []);
+
+  return <Button>Click me</Button>;
+}
+```
+
+If you set `data-theme` on a `<div id="root">`, the generated selectors will not match because ThemeShift emits theme variables under `:root[data-theme='...']`.
+
 ## Theming
 
 ThemeShift UI uses CSS variables for theming. Things like typography, spacing, and component colors are all driven by token-based custom properties.

@@ -75,6 +75,7 @@ export default defineConfig({
     themeShift({
       cssVarPrefix: 'themeshift',
       platforms: ['css', 'meta'],
+      defaultTheme: 'dark',
     }),
   ],
   build: {

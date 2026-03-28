@@ -61,7 +61,6 @@ async function copyThemeAssets() {
 }
 
 async function removeNonPublishedArtifacts() {
-  await rm(path.join(distDir, 'ui'), { recursive: true, force: true });
   await rm(path.join(distDir, 'index.d.ts'), { force: true });
 }
 
