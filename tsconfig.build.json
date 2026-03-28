@@ -16,12 +16,18 @@
     "src/index.ts",
     "src/components/**/*.ts",
     "src/ui/**/*.ts",
-    "src/ui/**/*.tsx"
+    "src/ui/**/*.tsx",
+    "src/contexts/**/*.ts",
+    "src/contexts/**/*.tsx"
   ],
   "exclude": [
     "src/main.tsx",
     "src/App.tsx",
-    "src/contexts/**",
-    "src/icons/**"
+    "src/icons/**",
+    "src/**/*.stories.ts",
+    "src/**/*.stories.tsx",
+    "src/**/*.test.ts",
+    "src/**/*.test.tsx",
+    ".storybook/**"
   ]
 }

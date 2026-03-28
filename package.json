@@ -23,6 +23,10 @@
       "types": "./dist/components/Heading/index.d.ts",
       "import": "./dist/components/Heading/index.js"
     },
+    "./contexts": {
+      "types": "./dist/contexts/index.d.ts",
+      "import": "./dist/contexts/index.js"
+    },
     "./css/base.css": "./dist/css/base.css",
     "./css/tokens.css": "./dist/css/tokens.css",
     "./theme-contract.json": "./theme-contract.json",
@@ -40,7 +44,9 @@
     "test:watch": "vitest --config vitest.config.ts",
     "test:coverage": "vitest run --coverage --config vitest.config.ts",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build"
   },
   "dependencies": {
     "@fontsource-variable/noto-sans": "^5.2.10",
@@ -77,6 +83,15 @@
     "typescript": "~5.9.3",
     "typescript-eslint": "^8.57.0",
     "vite": "^8.0.1",
-    "vitest": "^4.1.2"
+    "vitest": "^4.1.2",
+    "storybook": "^10.3.3",
+    "@storybook/react-vite": "^10.3.3",
+    "@chromatic-com/storybook": "^5.1.1",
+    "@storybook/addon-vitest": "^10.3.3",
+    "@storybook/addon-a11y": "^10.3.3",
+    "@storybook/addon-docs": "^10.3.3",
+    "eslint-plugin-storybook": "^10.3.3",
+    "playwright": "^1.58.2",
+    "@vitest/browser-playwright": "^4.1.2"
   }
 }

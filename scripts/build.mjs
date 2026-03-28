@@ -60,9 +60,15 @@ async function copyThemeAssets() {
   );
 }
 
+async function removeNonPublishedArtifacts() {
+  await rm(path.join(distDir, 'ui'), { recursive: true, force: true });
+  await rm(path.join(distDir, 'index.d.ts'), { force: true });
+}
+
 await rm(distDir, { recursive: true, force: true });
 
 await run('npx', ['vite', 'build', '--config', 'vite.config.components.ts']);
 await run('npx', ['tsc', '-p', 'tsconfig.build.json']);
+await removeNonPublishedArtifacts();
 await compileBaseCss();
 await copyThemeAssets();
