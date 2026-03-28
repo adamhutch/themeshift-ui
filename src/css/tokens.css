@@ -94,6 +94,7 @@
   --themeshift-text-style-body: 400 1rem/1.6 'Noto Sans Variable', 'Helvetica Neue', Arial, system-ui, sans-serif;
   --themeshift-text-style-caption: 400 0.875rem/1.4 'Noto Sans Variable', 'Helvetica Neue', Arial, system-ui, sans-serif;
   --themeshift-text-style-subtitle: 500 1.125rem/1.45 'Noto Sans Variable', 'Helvetica Neue', Arial, system-ui, sans-serif;
+  --themeshift-text-style-title: 400 1.25rem/1.3 'Noto Sans Variable', 'Helvetica Neue', Arial, system-ui, sans-serif;
 
   /* Accessibility */
   --themeshift-accessibility-focus-gap: #ffffff;
@@ -130,18 +131,16 @@
   --themeshift-components-button-sizes-small: 32px;
   --themeshift-components-link-font: 'Noto Sans Variable', 'Helvetica Neue', Arial, system-ui, sans-serif;
   --themeshift-components-link-padding: 0 1rem;
-  --themeshift-components-surface: transparent;
-  --themeshift-components-text: hotpink;
+  --themeshift-components-link-surface: transparent;
+  --themeshift-components-link-text: hotpink;
 
   /* Other */
-  --themeshift-base: {color.blueGrey.fg};
   --themeshift-grid-padding-large: 2rem;
   --themeshift-grid-padding-medium: 1rem;
   --themeshift-grid-padding-small: .5rem;
   --themeshift-radius-large: 2rem;
   --themeshift-radius-medium: 1rem;
   --themeshift-radius-small: .5rem;
-  --themeshift-title: [object Object];
 }
 
 :root[data-theme='light'] {
@@ -155,6 +154,7 @@
   /* Theme */
   --themeshift-theme-surface-base: #eceff1;
   --themeshift-theme-surface-raised: #cfd8dc;
+  --themeshift-theme-text-base: #000000;
 
   /* Components */
   --themeshift-components-button-intents-constructive-fg: #000000;
@@ -173,8 +173,8 @@
   --themeshift-components-button-intents-secondary-hover: #e0e0e0;
   --themeshift-components-button-intents-secondary-pressed: #9e9e9e;
   --themeshift-components-button-intents-secondary-surface: #bdbdbd;
-  --themeshift-components-surface: transparent;
-  --themeshift-components-text: dodgerblue;
+  --themeshift-components-link-surface: transparent;
+  --themeshift-components-link-text: dodgerblue;
 }
 
 :root[data-theme='dark'] {
@@ -204,6 +204,6 @@
   --themeshift-components-button-intents-secondary-hover: #e0e0e0;
   --themeshift-components-button-intents-secondary-pressed: #9e9e9e;
   --themeshift-components-button-intents-secondary-surface: #bdbdbd;
-  --themeshift-components-surface: transparent;
-  --themeshift-components-text: hotpink;
+  --themeshift-components-link-surface: transparent;
+  --themeshift-components-link-text: hotpink;
 }

@@ -11,7 +11,7 @@
       },
       "text": {
         "base": {
-          "$value": "{color.blueGrey.fg}"
+          "$value": "{color.blueGrey.50.fg}"
         }
       }
     }

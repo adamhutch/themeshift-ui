@@ -6,24 +6,24 @@
       },
       "font": {
         "$value": "{font.family.sans}"
-      }
-    },
-
-    "light": {
-      "text": {
-        "$value": "dodgerblue"
       },
-      "surface": {
-        "$value": "transparent"
-      }
-    },
 
-    "dark": {
-      "text": {
-        "$value": "hotpink"
+      "light": {
+        "text": {
+          "$value": "dodgerblue"
+        },
+        "surface": {
+          "$value": "transparent"
+        }
       },
-      "surface": {
-        "$value": "transparent"
+
+      "dark": {
+        "text": {
+          "$value": "hotpink"
+        },
+        "surface": {
+          "$value": "transparent"
+        }
       }
     }
   }
