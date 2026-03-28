@@ -23,15 +23,19 @@
       "types": "./dist/components/Heading/index.d.ts",
       "import": "./dist/components/Heading/index.js"
     },
+    "./components/Navbar": {
+      "types": "./dist/components/Navbar/index.d.ts",
+      "import": "./dist/components/Navbar/index.js"
+    },
     "./contexts": {
       "types": "./dist/contexts/index.d.ts",
       "import": "./dist/contexts/index.js"
     },
     "./css/base.css": "./dist/css/base.css",
     "./css/tokens.css": "./dist/css/tokens.css",
+    "./package.json": "./package.json",
     "./theme-contract.json": "./theme-contract.json",
-    "./tokens/*": "./dist/tokens/*",
-    "./package.json": "./package.json"
+    "./tokens/*": "./dist/tokens/*"
   },
   "scripts": {
     "dev": "vite",

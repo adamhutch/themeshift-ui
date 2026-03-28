@@ -133,11 +133,19 @@
   --themeshift-components-link-padding: 0 1rem;
   --themeshift-components-link-surface: transparent;
   --themeshift-components-link-text: hotpink;
+  --themeshift-components-navbar-border: transparent;
+  --themeshift-components-navbar-container-gap: 2rem;
+  --themeshift-components-navbar-min-height: 72px;
+  --themeshift-components-navbar-padding-block: 0;
+  --themeshift-components-navbar-padding-inline: 2rem;
+  --themeshift-components-navbar-section-gap: 1rem;
+  --themeshift-components-navbar-surface: transparent;
 
   /* Other */
   --themeshift-grid-padding-large: 2rem;
   --themeshift-grid-padding-medium: 1rem;
   --themeshift-grid-padding-small: .5rem;
+  --themeshift-layout-site-max-width: 1200px;
   --themeshift-radius-large: 2rem;
   --themeshift-radius-medium: 1rem;
   --themeshift-radius-small: .5rem;
@@ -175,6 +183,8 @@
   --themeshift-components-button-intents-secondary-surface: #bdbdbd;
   --themeshift-components-link-surface: transparent;
   --themeshift-components-link-text: dodgerblue;
+  --themeshift-components-navbar-border: transparent;
+  --themeshift-components-navbar-surface: transparent;
 }
 
 :root[data-theme='dark'] {
@@ -206,4 +216,6 @@
   --themeshift-components-button-intents-secondary-surface: #bdbdbd;
   --themeshift-components-link-surface: transparent;
   --themeshift-components-link-text: hotpink;
+  --themeshift-components-navbar-border: transparent;
+  --themeshift-components-navbar-surface: transparent;
 }

@@ -90,6 +90,9 @@ export default defineConfig({
         'components/Heading/index': fileURLToPath(
           new URL('./src/components/Heading/index.ts', import.meta.url),
         ),
+        'components/Navbar/index': fileURLToPath(
+          new URL('./src/components/Navbar/index.ts', import.meta.url),
+        ),
         'contexts/index': fileURLToPath(new URL('./src/contexts/index.ts', import.meta.url)),
       },
       formats: ['es'],

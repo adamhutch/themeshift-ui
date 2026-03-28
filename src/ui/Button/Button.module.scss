@@ -7,7 +7,7 @@
 
   padding: token('components.button.padding');
   border-radius: token('radius.small');
-  font: bold token('font.size.m') token('components.button.font');
+  font: token('font.size.m') token('components.button.font');
   white-space: nowrap;
 
   &:focus {
