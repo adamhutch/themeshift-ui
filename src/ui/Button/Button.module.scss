@@ -1,13 +1,14 @@
 @use '@/sass/mixins/components/button';
 @use '@/sass/mixins/components/link';
 @use '@/sass/mixins/accessibility';
+@use '@/sass/mixins/typography';
 
 .container {
   @include button.reset;
 
   padding: token('components.button.padding');
   border-radius: token('radius.small');
-  font: token('font.size.m') token('components.button.font');
+  @include typography.style('button.medium');
   white-space: nowrap;
 
   &:focus {
@@ -36,18 +37,18 @@
 
 // Button sizes
 .small {
-  font-size: token('font.size.xs');
-  line-height: token('components.button.sizes.small');
+  @include typography.style('button.small');
+  min-height: token('components.button.sizes.small');
 }
 
 .medium {
-  font-size: token('font.size.m');
-  line-height: token('components.button.sizes.medium');
+  @include typography.style('button.medium');
+  min-height: token('components.button.sizes.medium');
 }
 
 .large {
-  font-size: token('font.size.l');
-  line-height: token('components.button.sizes.large');
+  @include typography.style('button.large');
+  min-height: token('components.button.sizes.large');
 }
 
 // Button intents

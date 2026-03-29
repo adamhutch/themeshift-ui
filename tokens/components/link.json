@@ -10,7 +10,7 @@
 
       "light": {
         "text": {
-          "$value": "dodgerblue"
+          "$value": "{color.blue.600}"
         },
         "surface": {
           "$value": "transparent"
@@ -19,7 +19,7 @@
 
       "dark": {
         "text": {
-          "$value": "hotpink"
+          "$value": "{color.lightBlue.400}"
         },
         "surface": {
           "$value": "transparent"

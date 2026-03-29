@@ -1,7 +1,7 @@
-@use '../../tokens.runtime.scss' as *;
+@use '@themeshift/vite-plugin-themeshift/token' as themeShift;
 
 .link {
-  color: token('components.link.text');
+  color: themeShift.token('components.link.text');
 }
 
 @mixin hover {

@@ -74,7 +74,7 @@
     "@testing-library/jest-dom": "^6.9.1",
     "@testing-library/react": "^16.3.2",
     "@testing-library/user-event": "^14.6.1",
-    "@themeshift/vite-plugin-themeshift": "^0.3.8",
+    "@themeshift/vite-plugin-themeshift": "^0.3.11",
     "@types/jest-axe": "^3.5.9",
     "@types/node": "^24.12.0",
     "@types/react": "^19.2.14",

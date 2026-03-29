@@ -104,9 +104,9 @@ export const tokenValues = {
   "components.button.light.intents.destructive.pressed": "#F44336",
   "components.button.light.intents.destructive.surface": "#EF5350",
   "components.button.light.intents.primary.fg": "#fff",
-  "components.button.light.intents.primary.hover": "#4FC3F7",
-  "components.button.light.intents.primary.pressed": "#03A9F4",
-  "components.button.light.intents.primary.surface": "#29B6F6",
+  "components.button.light.intents.primary.hover": "#7986CB",
+  "components.button.light.intents.primary.pressed": "#3F51B5",
+  "components.button.light.intents.primary.surface": "#5C6BC0",
   "components.button.light.intents.secondary.fg": "#000",
   "components.button.light.intents.secondary.hover": "#E0E0E0",
   "components.button.light.intents.secondary.pressed": "#9E9E9E",
@@ -116,10 +116,10 @@ export const tokenValues = {
   "components.button.sizes.medium": "40px",
   "components.button.sizes.small": "32px",
   "components.link.dark.surface": "transparent",
-  "components.link.dark.text": "hotpink",
+  "components.link.dark.text": "#29B6F6",
   "components.link.font": "'Noto Sans Variable', 'Helvetica Neue', Arial, system-ui, sans-serif",
   "components.link.light.surface": "transparent",
-  "components.link.light.text": "dodgerblue",
+  "components.link.light.text": "#3949AB",
   "components.link.padding": "0 1rem",
   "components.navbar.container.gap": "2rem",
   "components.navbar.dark.border": "transparent",
@@ -130,18 +130,16 @@ export const tokenValues = {
   "components.navbar.padding.block": "0",
   "components.navbar.padding.inline": "2rem",
   "components.navbar.section.gap": "1rem",
+  "font.family.display": "Georgia, serif",
   "font.family.sans": "'Noto Sans Variable', 'Helvetica Neue', Arial, system-ui, sans-serif",
-  "font.family.serif": "'Roboto Slab', Georgia, serif",
-  "font.size.l": "1.125rem",
-  "font.size.m": "1rem",
-  "font.size.s": "0.875rem",
-  "font.size.xl": "1.25rem",
-  "font.size.xs": "0.75rem",
-  "font.size.xxl": "1.5rem",
+  "font.family.serif": "Georgia, serif",
+  "font.style.italic": "italic",
+  "font.style.normal": "normal",
   "font.weight.bold": "700",
   "font.weight.light": "300",
   "font.weight.medium": "500",
   "font.weight.regular": "400",
+  "font.weight.semiBold": "600",
   "grid.padding.large": "2rem",
   "grid.padding.medium": "1rem",
   "grid.padding.small": ".5rem",
@@ -152,39 +150,346 @@ export const tokenValues = {
   "radius.large": "2rem",
   "radius.medium": "1rem",
   "radius.small": ".5rem",
-  "text.size.body": "1rem",
-  "text.size.caption": "0.875rem",
-  "text.size.subtitle": "1.125rem",
-  "text.size.title": "1.25rem",
-  "text.style.body": {
-    "fontFamily": "'Noto Sans Variable', 'Helvetica Neue', Arial, system-ui, sans-serif",
-    "fontSize": "1rem",
-    "lineHeight": "1.6",
-    "fontWeight": "400"
-  },
-  "text.style.caption": {
-    "fontFamily": "'Noto Sans Variable', 'Helvetica Neue', Arial, system-ui, sans-serif",
-    "fontSize": "0.875rem",
-    "lineHeight": "1.4",
-    "fontWeight": "400"
-  },
-  "text.style.subtitle": {
-    "fontFamily": "'Noto Sans Variable', 'Helvetica Neue', Arial, system-ui, sans-serif",
-    "fontSize": "1.125rem",
-    "lineHeight": "1.45",
-    "fontWeight": "500"
-  },
-  "text.style.title": {
-    "fontFamily": "'Noto Sans Variable', 'Helvetica Neue', Arial, system-ui, sans-serif",
-    "fontSize": "1.25rem",
-    "lineHeight": "1.3",
-    "fontWeight": "400"
-  },
   "theme.dark.surface.base": "#263238",
   "theme.dark.surface.raised": "#37474F",
   "theme.dark.text.base": "#fff",
+  "theme.dark.text.muted": "rgba(255, 255, 255, .7)",
   "theme.light.surface.base": "#ECEFF1",
   "theme.light.surface.raised": "#CFD8DC",
-  "theme.light.text.base": "#000"
+  "theme.light.text.base": "#000",
+  "theme.light.text.muted": "rgba(0, 0, 0, .7)",
+  "typography.metrics.-1.fontSize": "0.75rem",
+  "typography.metrics.-1.letterSpacing": "0.02em",
+  "typography.metrics.-1.lineHeight": "1rem",
+  "typography.metrics.0.fontSize": "0.875rem",
+  "typography.metrics.0.letterSpacing": "0.02em",
+  "typography.metrics.0.lineHeight": "1.125rem",
+  "typography.metrics.1.fontSize": "1rem",
+  "typography.metrics.1.letterSpacing": "0.01em",
+  "typography.metrics.1.lineHeight": "1.375rem",
+  "typography.metrics.2.fontSize": "1.125rem",
+  "typography.metrics.2.letterSpacing": "0.01em",
+  "typography.metrics.2.lineHeight": "1.5rem",
+  "typography.metrics.3.fontSize": "1.25rem",
+  "typography.metrics.3.letterSpacing": "0",
+  "typography.metrics.3.lineHeight": "1.5rem",
+  "typography.metrics.4.fontSize": "1.375rem",
+  "typography.metrics.4.letterSpacing": "0",
+  "typography.metrics.4.lineHeight": "1.75rem",
+  "typography.metrics.5.fontSize": "1.5rem",
+  "typography.metrics.5.letterSpacing": "0",
+  "typography.metrics.5.lineHeight": "2.25rem",
+  "typography.metrics.6.fontSize": "2rem",
+  "typography.metrics.6.letterSpacing": "-0.02em",
+  "typography.metrics.6.lineHeight": "2.5rem",
+  "typography.metrics.7.fontSize": "3rem",
+  "typography.metrics.7.letterSpacing": "-0.02em",
+  "typography.metrics.7.lineHeight": "3.375rem",
+  "typography.scales.-1.bold": {
+    "fontFamily": "'Noto Sans Variable', 'Helvetica Neue', Arial, system-ui, sans-serif",
+    "fontSize": "0.75rem",
+    "lineHeight": "1rem",
+    "fontWeight": "700"
+  },
+  "typography.scales.-1.regular": {
+    "fontFamily": "'Noto Sans Variable', 'Helvetica Neue', Arial, system-ui, sans-serif",
+    "fontSize": "0.75rem",
+    "lineHeight": "1rem",
+    "fontWeight": "400"
+  },
+  "typography.scales.-1.semiBold": {
+    "fontFamily": "'Noto Sans Variable', 'Helvetica Neue', Arial, system-ui, sans-serif",
+    "fontSize": "0.75rem",
+    "lineHeight": "1rem",
+    "fontWeight": "600"
+  },
+  "typography.scales.0.bold": {
+    "fontFamily": "'Noto Sans Variable', 'Helvetica Neue', Arial, system-ui, sans-serif",
+    "fontSize": "0.875rem",
+    "lineHeight": "1.125rem",
+    "fontWeight": "700"
+  },
+  "typography.scales.0.regular": {
+    "fontFamily": "'Noto Sans Variable', 'Helvetica Neue', Arial, system-ui, sans-serif",
+    "fontSize": "0.875rem",
+    "lineHeight": "1.125rem",
+    "fontWeight": "400"
+  },
+  "typography.scales.0.semiBold": {
+    "fontFamily": "'Noto Sans Variable', 'Helvetica Neue', Arial, system-ui, sans-serif",
+    "fontSize": "0.875rem",
+    "lineHeight": "1.125rem",
+    "fontWeight": "600"
+  },
+  "typography.scales.1.bold": {
+    "fontFamily": "'Noto Sans Variable', 'Helvetica Neue', Arial, system-ui, sans-serif",
+    "fontSize": "1rem",
+    "lineHeight": "1.375rem",
+    "fontWeight": "700"
+  },
+  "typography.scales.1.regular": {
+    "fontFamily": "'Noto Sans Variable', 'Helvetica Neue', Arial, system-ui, sans-serif",
+    "fontSize": "1rem",
+    "lineHeight": "1.375rem",
+    "fontWeight": "400"
+  },
+  "typography.scales.1.semiBold": {
+    "fontFamily": "'Noto Sans Variable', 'Helvetica Neue', Arial, system-ui, sans-serif",
+    "fontSize": "1rem",
+    "lineHeight": "1.375rem",
+    "fontWeight": "600"
+  },
+  "typography.scales.2.bold": {
+    "fontFamily": "'Noto Sans Variable', 'Helvetica Neue', Arial, system-ui, sans-serif",
+    "fontSize": "1.125rem",
+    "lineHeight": "1.5rem",
+    "fontWeight": "700"
+  },
+  "typography.scales.2.regular": {
+    "fontFamily": "'Noto Sans Variable', 'Helvetica Neue', Arial, system-ui, sans-serif",
+    "fontSize": "1.125rem",
+    "lineHeight": "1.5rem",
+    "fontWeight": "400"
+  },
+  "typography.scales.2.semiBold": {
+    "fontFamily": "'Noto Sans Variable', 'Helvetica Neue', Arial, system-ui, sans-serif",
+    "fontSize": "1.125rem",
+    "lineHeight": "1.5rem",
+    "fontWeight": "600"
+  },
+  "typography.scales.3.bold": {
+    "fontFamily": "'Noto Sans Variable', 'Helvetica Neue', Arial, system-ui, sans-serif",
+    "fontSize": "1.25rem",
+    "lineHeight": "1.5rem",
+    "fontWeight": "700"
+  },
+  "typography.scales.3.regular": {
+    "fontFamily": "'Noto Sans Variable', 'Helvetica Neue', Arial, system-ui, sans-serif",
+    "fontSize": "1.25rem",
+    "lineHeight": "1.5rem",
+    "fontWeight": "400"
+  },
+  "typography.scales.3.semiBold": {
+    "fontFamily": "'Noto Sans Variable', 'Helvetica Neue', Arial, system-ui, sans-serif",
+    "fontSize": "1.25rem",
+    "lineHeight": "1.5rem",
+    "fontWeight": "600"
+  },
+  "typography.scales.4.bold": {
+    "fontFamily": "'Noto Sans Variable', 'Helvetica Neue', Arial, system-ui, sans-serif",
+    "fontSize": "1.375rem",
+    "lineHeight": "1.75rem",
+    "fontWeight": "700"
+  },
+  "typography.scales.4.regular": {
+    "fontFamily": "'Noto Sans Variable', 'Helvetica Neue', Arial, system-ui, sans-serif",
+    "fontSize": "1.375rem",
+    "lineHeight": "1.75rem",
+    "fontWeight": "400"
+  },
+  "typography.scales.4.semiBold": {
+    "fontFamily": "'Noto Sans Variable', 'Helvetica Neue', Arial, system-ui, sans-serif",
+    "fontSize": "1.375rem",
+    "lineHeight": "1.75rem",
+    "fontWeight": "600"
+  },
+  "typography.scales.5.bold": {
+    "fontFamily": "'Noto Sans Variable', 'Helvetica Neue', Arial, system-ui, sans-serif",
+    "fontSize": "1.5rem",
+    "lineHeight": "2.25rem",
+    "fontWeight": "700"
+  },
+  "typography.scales.5.regular": {
+    "fontFamily": "'Noto Sans Variable', 'Helvetica Neue', Arial, system-ui, sans-serif",
+    "fontSize": "1.5rem",
+    "lineHeight": "2.25rem",
+    "fontWeight": "400"
+  },
+  "typography.scales.5.semiBold": {
+    "fontFamily": "'Noto Sans Variable', 'Helvetica Neue', Arial, system-ui, sans-serif",
+    "fontSize": "1.5rem",
+    "lineHeight": "2.25rem",
+    "fontWeight": "600"
+  },
+  "typography.scales.6.bold": {
+    "fontFamily": "'Noto Sans Variable', 'Helvetica Neue', Arial, system-ui, sans-serif",
+    "fontSize": "2rem",
+    "lineHeight": "2.5rem",
+    "fontWeight": "700"
+  },
+  "typography.scales.6.regular": {
+    "fontFamily": "'Noto Sans Variable', 'Helvetica Neue', Arial, system-ui, sans-serif",
+    "fontSize": "2rem",
+    "lineHeight": "2.5rem",
+    "fontWeight": "400"
+  },
+  "typography.scales.6.semiBold": {
+    "fontFamily": "'Noto Sans Variable', 'Helvetica Neue', Arial, system-ui, sans-serif",
+    "fontSize": "2rem",
+    "lineHeight": "2.5rem",
+    "fontWeight": "600"
+  },
+  "typography.scales.7.bold": {
+    "fontFamily": "'Noto Sans Variable', 'Helvetica Neue', Arial, system-ui, sans-serif",
+    "fontSize": "3rem",
+    "lineHeight": "3.375rem",
+    "fontWeight": "700"
+  },
+  "typography.scales.7.regular": {
+    "fontFamily": "'Noto Sans Variable', 'Helvetica Neue', Arial, system-ui, sans-serif",
+    "fontSize": "3rem",
+    "lineHeight": "3.375rem",
+    "fontWeight": "400"
+  },
+  "typography.scales.7.semiBold": {
+    "fontFamily": "'Noto Sans Variable', 'Helvetica Neue', Arial, system-ui, sans-serif",
+    "fontSize": "3rem",
+    "lineHeight": "3.375rem",
+    "fontWeight": "600"
+  },
+  "typography.styles.body.default.font": {
+    "fontFamily": "'Noto Sans Variable', 'Helvetica Neue', Arial, system-ui, sans-serif",
+    "fontSize": "1rem",
+    "lineHeight": "1.375rem",
+    "fontWeight": "400"
+  },
+  "typography.styles.body.default.fontStyle": "normal",
+  "typography.styles.body.default.letterSpacing": "0.01em",
+  "typography.styles.body.italic.font": {
+    "fontFamily": "'Noto Sans Variable', 'Helvetica Neue', Arial, system-ui, sans-serif",
+    "fontSize": "1rem",
+    "lineHeight": "1.375rem",
+    "fontWeight": "400"
+  },
+  "typography.styles.body.italic.fontStyle": "italic",
+  "typography.styles.body.italic.letterSpacing": "0.01em",
+  "typography.styles.body.strong.font": {
+    "fontFamily": "'Noto Sans Variable', 'Helvetica Neue', Arial, system-ui, sans-serif",
+    "fontSize": "1rem",
+    "lineHeight": "1.375rem",
+    "fontWeight": "600"
+  },
+  "typography.styles.body.strong.fontStyle": "normal",
+  "typography.styles.body.strong.letterSpacing": "0.01em",
+  "typography.styles.button.large.font": {
+    "fontFamily": "'Noto Sans Variable', 'Helvetica Neue', Arial, system-ui, sans-serif",
+    "fontSize": "1.125rem",
+    "lineHeight": "1.5rem",
+    "fontWeight": "600"
+  },
+  "typography.styles.button.large.fontStyle": "normal",
+  "typography.styles.button.large.letterSpacing": "0.01em",
+  "typography.styles.button.medium.font": {
+    "fontFamily": "'Noto Sans Variable', 'Helvetica Neue', Arial, system-ui, sans-serif",
+    "fontSize": "1rem",
+    "lineHeight": "1.375rem",
+    "fontWeight": "600"
+  },
+  "typography.styles.button.medium.fontStyle": "normal",
+  "typography.styles.button.medium.letterSpacing": "0.01em",
+  "typography.styles.button.small.font": {
+    "fontFamily": "'Noto Sans Variable', 'Helvetica Neue', Arial, system-ui, sans-serif",
+    "fontSize": "0.875rem",
+    "lineHeight": "1.125rem",
+    "fontWeight": "600"
+  },
+  "typography.styles.button.small.fontStyle": "normal",
+  "typography.styles.button.small.letterSpacing": "0.02em",
+  "typography.styles.caption.default.font": {
+    "fontFamily": "'Noto Sans Variable', 'Helvetica Neue', Arial, system-ui, sans-serif",
+    "fontSize": "0.75rem",
+    "lineHeight": "1rem",
+    "fontWeight": "400"
+  },
+  "typography.styles.caption.default.fontStyle": "normal",
+  "typography.styles.caption.default.letterSpacing": "0.02em",
+  "typography.styles.caption.italic.font": {
+    "fontFamily": "'Noto Sans Variable', 'Helvetica Neue', Arial, system-ui, sans-serif",
+    "fontSize": "0.75rem",
+    "lineHeight": "1rem",
+    "fontWeight": "400"
+  },
+  "typography.styles.caption.italic.fontStyle": "italic",
+  "typography.styles.caption.italic.letterSpacing": "0.02em",
+  "typography.styles.heading.h1.display.font": {
+    "fontFamily": "Georgia, serif",
+    "fontSize": "1.5rem",
+    "lineHeight": "2.25rem",
+    "fontWeight": "700"
+  },
+  "typography.styles.heading.h1.display.fontStyle": "normal",
+  "typography.styles.heading.h1.display.letterSpacing": "0",
+  "typography.styles.heading.h1.font": {
+    "fontFamily": "'Noto Sans Variable', 'Helvetica Neue', Arial, system-ui, sans-serif",
+    "fontSize": "1.5rem",
+    "lineHeight": "2.25rem",
+    "fontWeight": "700"
+  },
+  "typography.styles.heading.h1.fontStyle": "normal",
+  "typography.styles.heading.h1.letterSpacing": "0",
+  "typography.styles.heading.h2.display.font": {
+    "fontFamily": "Georgia, serif",
+    "fontSize": "1.375rem",
+    "lineHeight": "1.75rem",
+    "fontWeight": "700"
+  },
+  "typography.styles.heading.h2.display.fontStyle": "normal",
+  "typography.styles.heading.h2.display.letterSpacing": "0",
+  "typography.styles.heading.h2.font": {
+    "fontFamily": "'Noto Sans Variable', 'Helvetica Neue', Arial, system-ui, sans-serif",
+    "fontSize": "1.375rem",
+    "lineHeight": "1.75rem",
+    "fontWeight": "700"
+  },
+  "typography.styles.heading.h2.fontStyle": "normal",
+  "typography.styles.heading.h2.letterSpacing": "0",
+  "typography.styles.heading.h3.font": {
+    "fontFamily": "'Noto Sans Variable', 'Helvetica Neue', Arial, system-ui, sans-serif",
+    "fontSize": "1.25rem",
+    "lineHeight": "1.5rem",
+    "fontWeight": "700"
+  },
+  "typography.styles.heading.h3.fontStyle": "normal",
+  "typography.styles.heading.h3.letterSpacing": "0",
+  "typography.styles.heading.h4.font": {
+    "fontFamily": "'Noto Sans Variable', 'Helvetica Neue', Arial, system-ui, sans-serif",
+    "fontSize": "1.125rem",
+    "lineHeight": "1.5rem",
+    "fontWeight": "700"
+  },
+  "typography.styles.heading.h4.fontStyle": "normal",
+  "typography.styles.heading.h4.letterSpacing": "0.01em",
+  "typography.styles.heading.h5.font": {
+    "fontFamily": "'Noto Sans Variable', 'Helvetica Neue', Arial, system-ui, sans-serif",
+    "fontSize": "1rem",
+    "lineHeight": "1.375rem",
+    "fontWeight": "700"
+  },
+  "typography.styles.heading.h5.fontStyle": "normal",
+  "typography.styles.heading.h5.letterSpacing": "0.01em",
+  "typography.styles.heading.h6.font": {
+    "fontFamily": "'Noto Sans Variable', 'Helvetica Neue', Arial, system-ui, sans-serif",
+    "fontSize": "0.875rem",
+    "lineHeight": "1.125rem",
+    "fontWeight": "700"
+  },
+  "typography.styles.heading.h6.fontStyle": "normal",
+  "typography.styles.heading.h6.letterSpacing": "0.02em",
+  "typography.styles.hero.default.display.font": {
+    "fontFamily": "Georgia, serif",
+    "fontSize": "3rem",
+    "lineHeight": "3.375rem",
+    "fontWeight": "700"
+  },
+  "typography.styles.hero.default.display.fontStyle": "normal",
+  "typography.styles.hero.default.display.letterSpacing": "-0.02em",
+  "typography.styles.hero.default.font": {
+    "fontFamily": "'Noto Sans Variable', 'Helvetica Neue', Arial, system-ui, sans-serif",
+    "fontSize": "3rem",
+    "lineHeight": "3.375rem",
+    "fontWeight": "700"
+  },
+  "typography.styles.hero.default.fontStyle": "normal",
+  "typography.styles.hero.default.letterSpacing": "-0.02em"
 } as const;
 export type TokenValuePath = keyof typeof tokenValues;

@@ -18,10 +18,10 @@
       "light": {
         "intents": {
           "primary": {
-            "surface": { "$value": "{color.lightBlue.400}" },
-            "fg": { "$value": "{color.lightBlue.400.fg}" },
-            "hover": { "$value": "{color.lightBlue.300}" },
-            "pressed": { "$value": "{color.lightBlue.500}" }
+            "surface": { "$value": "{color.blue.400}" },
+            "fg": { "$value": "{color.blue.400.fg}" },
+            "hover": { "$value": "{color.blue.300}" },
+            "pressed": { "$value": "{color.blue.500}" }
           },
 
           "secondary": {

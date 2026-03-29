@@ -6,6 +6,31 @@ import react from '@vitejs/plugin-react';
 import { themeShift } from '@themeshift/vite-plugin-themeshift';
 import type { OutputAsset, OutputBundle, OutputChunk } from 'rollup';
 
+const cssGroups = [
+  { label: 'Colors', match: (n: string) => n.startsWith('color-') },
+  {
+    label: 'Typography',
+    match: (n: string) => n.startsWith('font-') || n.startsWith('typography-'),
+  },
+  {
+    label: 'Accessibility',
+    match: (n: string) =>
+      n.startsWith('accessibility-') || n.startsWith('a11y-'),
+  },
+  {
+    label: 'Layout',
+    match: (n: string) => n.startsWith('grid-') || n.startsWith('layout-'),
+  },
+  { label: 'Border Radius', match: (n: string) => n.startsWith('radius-') },
+  { label: 'Theme', match: (n: string) => n.startsWith('theme-') },
+  {
+    label: 'Components',
+    match: (n: string) =>
+      n.startsWith('component-') || n.startsWith('components-'),
+  },
+  { label: 'Other', match: (_n: string) => true },
+];
+
 function injectComponentCss(): Plugin {
   return {
     name: 'inject-component-css',
@@ -17,7 +42,10 @@ function injectComponentCss(): Plugin {
           continue;
         }
 
-        if (!chunk.fileName.startsWith('components/') || !chunk.fileName.endsWith('/index.js')) {
+        if (
+          !chunk.fileName.startsWith('components/') ||
+          !chunk.fileName.endsWith('/index.js')
+        ) {
           continue;
         }
 
@@ -30,13 +58,20 @@ function injectComponentCss(): Plugin {
         const cssParts: string[] = [];
 
         for (const cssFileName of importedCss) {
-          const asset = bundle[cssFileName] as OutputAsset | OutputChunk | undefined;
+          const asset = bundle[cssFileName] as
+            | OutputAsset
+            | OutputChunk
+            | undefined;
 
           if (!asset || asset.type !== 'asset') {
             continue;
           }
 
-          cssParts.push(typeof asset.source === 'string' ? asset.source : asset.source.toString());
+          cssParts.push(
+            typeof asset.source === 'string'
+              ? asset.source
+              : asset.source.toString()
+          );
           cssAssetsToRemove.add(cssFileName);
         }
 
@@ -75,9 +110,16 @@ export default defineConfig({
     themeShift({
       cssVarPrefix: 'themeshift',
       platforms: ['css', 'meta', 'scss'],
+      groups: cssGroups,
       filters: {
         scss: {
-          includePrefixes: ['radius-', 'spacing-', 'font-', 'text-', 'layout-'],
+          includePrefixes: [
+            'radius-',
+            'spacing-',
+            'font-',
+            'typography-',
+            'layout-',
+          ],
           excludePrefixes: ['theme-', 'components-'],
         },
       },
@@ -91,18 +133,20 @@ export default defineConfig({
     lib: {
       entry: {
         'components/Button/index': fileURLToPath(
-          new URL('./src/components/Button/index.ts', import.meta.url),
+          new URL('./src/components/Button/index.ts', import.meta.url)
         ),
         'components/Heading/index': fileURLToPath(
-          new URL('./src/components/Heading/index.ts', import.meta.url),
+          new URL('./src/components/Heading/index.ts', import.meta.url)
         ),
         'components/Navbar/index': fileURLToPath(
-          new URL('./src/components/Navbar/index.ts', import.meta.url),
+          new URL('./src/components/Navbar/index.ts', import.meta.url)
         ),
         'components/Responsive/index': fileURLToPath(
-          new URL('./src/components/Responsive/index.ts', import.meta.url),
+          new URL('./src/components/Responsive/index.ts', import.meta.url)
         ),
-        'contexts/index': fileURLToPath(new URL('./src/contexts/index.ts', import.meta.url)),
+        'contexts/index': fileURLToPath(
+          new URL('./src/contexts/index.ts', import.meta.url)
+        ),
       },
       formats: ['es'],
     },

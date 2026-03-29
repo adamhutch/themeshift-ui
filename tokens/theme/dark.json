@@ -5,13 +5,19 @@
         "base": {
           "$value": "{color.blueGrey.900}"
         },
+
         "raised": {
           "$value": "{color.blueGrey.800}"
         }
       },
+
       "text": {
         "base": {
-          "$value": "{color.blueGrey.900.fg}"
+          "$value": "{color.white}"
+        },
+
+        "muted": {
+          "$value": "{color.white.70}"
         }
       }
     }

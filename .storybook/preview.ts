@@ -155,6 +155,12 @@ const preview: Preview = {
       }),
   ],
   parameters: {
+    options: {
+      storySort: {
+        order: ['Foundations', 'Components'],
+        method: 'alphabetical',
+      },
+    },
     controls: {
       matchers: {
         color: /(background|color)$/i,

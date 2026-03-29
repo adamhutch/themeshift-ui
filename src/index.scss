@@ -1,3 +1,5 @@
+@use '@/sass/mixins/typography';
+
 @import '@fontsource-variable/noto-sans/wght.css';
 @import '@fontsource-variable/noto-sans/wght-italic.css';
 
@@ -6,10 +8,8 @@
   color: token('theme.text.base');
   background-color: token('theme.surface.base');
 
-  font-family: token('font.family.sans');
-  font-size: 16px;
-  line-height: 1.5;
-  font-weight: 400;
+  @include typography.style('body.default');
+
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -23,7 +23,7 @@
 }
 
 html {
-  line-height: 1.5;
+  line-height: token('typography.metrics.1.lineHeight');
   -webkit-text-size-adjust: 100%;
   tab-size: 4;
 }

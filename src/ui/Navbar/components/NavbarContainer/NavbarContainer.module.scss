@@ -1,5 +1,3 @@
-@use '@/sass/tokens.runtime.scss' as *;
-
 .container {
   --navbar-container-gap: #{token('components.navbar.container.gap')};
   --navbar-max-width: #{token('layout.site.maxWidth')};
